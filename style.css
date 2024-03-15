@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --fc-color-primary: #fff;
+  --fc-color-secondary: #34355b;
+  --fc-color-tertiary: #000;
+  --bg-phrase-color: #e4edf1;
+  --button: #ff9500;
+}
+
+body {
+  font-size: 1.6rem;
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+main {
+  width: min(42.8rem, 90%);
+  margin: -12rem auto 0;
+  padding: 4.8rem 6.4rem 6.4rem;
+  text-align: center;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem;
+  color: var(--fc-color-secondary);
+  background: var(--fc-color-primary);
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 2.9rem;
+}
+
+.hide {
+  display: none;
+}
+
+.screen1 p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 1.4rem 0 2rem;
+}
+
+.screen1 img {
+  cursor: pointer;
+}
+
+.screen1 img:hover {
+  -webkit-animation: vibrate 0.3s linear infinite both;
+  animation: vibrate 0.3s linear infinite both;
+}
+
+@keyframes vibrate {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+.screen2 p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+  margin-top: 1.7rem;
+  color: var(--fc-color-tertiary);
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+  background: var(--bg-phrase-color);
+  animation: bottomUp 1.5s both;
+}
+
+@keyframes bottomUp {
+  0% {
+    transform: scale(0.4) translateY(400px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.screen2 button {
+  font-family: 'DM Sans', sans-serif;
+  padding: 1.6rem;
+  color: var(--fc-color-primary);
+  background: var(--button);
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: filter 300ms;
+}
+
+.screen2 button:hover {
+  filter: brightness(1.2);
+}
+
+@media (max-width: 500px) {
+  main {
+    padding: 4.8rem 2.4rem 6.4rem;
+  }
+}
