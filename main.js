@@ -3,8 +3,6 @@ const screen2 = document.querySelector('.screen2')
 const imgCookieOpen = document.querySelector('.screen1 img')
 const btn = document.querySelector('#btn')
 
-let randomPhrase = Math.round(Math.random() * 10)
-
 let phrases = [
   'Você é mais forte do que imagina.',
   'O sucesso é uma escolha, escolha ser bem-sucedido.',
@@ -19,6 +17,8 @@ let phrases = [
   'É em meio a dificuldade que se encontra a oportunidade',
 ]
 
+let randomPhrase = Math.round(Math.random() * 10)
+
 function toggleScreen() {
   screen1.classList.toggle('hide')
   screen2.classList.toggle('hide')
@@ -28,12 +28,12 @@ function newPhrase() {
   document.querySelector('.screen2 p').innerText = phrases[randomPhrase]
 }
 
-btn.addEventListener('click', () => {
-  toggleScreen()
-  randomPhrase = Math.round(Math.random() * 10)
-})
-
 imgCookieOpen.addEventListener('click', () => {
   toggleScreen()
   newPhrase()
+})
+
+btn.addEventListener('click', () => {
+  toggleScreen()
+  randomPhrase = Math.round(Math.random() * 10)
 })
