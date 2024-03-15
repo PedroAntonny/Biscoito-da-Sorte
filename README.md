@@ -24,6 +24,7 @@
   - [Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid)
   - [KeyFrames](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes)
   - [MediaQueries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 
 ## 📕License
 
